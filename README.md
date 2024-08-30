@@ -71,6 +71,18 @@ const router = createRouter({
 })
 ```
 
+### [unplugin-vue-router](https://github.com/posva/unplugin-vue-router)-ts
+```ts
+import { createRouter } from 'vue-router/auto'
+import { setupLayouts } from 'virtual:generated-layouts'
+import { routes } from 'vue-router/auto-routes'
+
+const router = createRouter({
+  // ...
+  routes: setupLayouts(routes)
+})
+```
+
 ## Client Types
 If you want type definition of `virtual:generated-layouts`, add `vite-plugin-vue-layouts/client` to `compilerOptions.types` of your `tsconfig`:
 ```json
